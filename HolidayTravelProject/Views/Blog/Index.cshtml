@@ -1,4 +1,5 @@
-﻿
+﻿@using HolidayTravelProject.Models.Sınıflar
+@model List<Blog>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -13,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Personal Blog a Blogging Category Flat Bootstarp  Responsive Website Template | Single :: w3layouts</title>
+    
     <link href="~/webBlog/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="~/webBlog/css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,23 +25,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!----webfonts---->
     <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
-    <!----//webfonts---->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!--end slider -->
-    <!--script-->
-    <script type="text/javascript" src="~/webBlog/js/move-top.js"></script>
-    <script type="text/javascript" src="~/webBlog/js/easing.js"></script>
-    <!--/script-->
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
-            });
-        });
-    </script>
-    <!---->
-
+   
 </head>
 <body>
     <!---header---->
@@ -56,20 +41,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
+                @foreach (var x in Model) 
+                {
                 <div class="single-grid">
-                    <img src="~/webBlog/images/post1.jpg" alt="" />
-                    <a href="#">Macaristan'da 1 gün </a>
+
+                    <img src="@x.BlogImage" alt="" />
+                    <a href="#">@x.Baslik </a>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                       @x.Aciklama
                     </p>
                 </div>   
-                <div class="single-grid">
-                    <img src="~/webBlog/images/ly.jpg" alt="" />
-                    <a href="#">Kyiv'de 7 gün </a>
-                    <p>
-                       test yazısı..
-                    </p>
-                </div>
+                }
             </div>
 
             <div class="col-md-4 side-content">
@@ -96,4 +78,4 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
     </body>
-
+</html>
