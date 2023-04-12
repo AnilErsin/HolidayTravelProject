@@ -17,5 +17,10 @@ namespace HolidayTravelProject.Controllers
 
             return View(blogs);
         }
+
+        public ActionResult BlogDetay(int id)
+        {
+            return View();
+        }
     }
 }
