@@ -11,14 +11,18 @@ namespace HolidayTravelProject.Controllers
     {
         // GET: Blog
         Context c = new Context();
+        BlogYorum by = new BlogYorum();
         public ActionResult Index()
         {
-            var blogs = c.Blogs.ToList();
+            //var blogs = c.Blogs.ToList();
 
-            return View(blogs);
+            by.Deger1 = c.Blogs.ToList();
+            by.Deger3 = c.Blogs.Take(3).ToList();
+
+            return View(by);
         }
 
-        BlogYorum by = new BlogYorum();
+      
         public ActionResult BlogDetay(int id)
         {
             
