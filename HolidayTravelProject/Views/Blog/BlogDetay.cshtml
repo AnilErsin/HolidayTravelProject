@@ -1,4 +1,5 @@
-﻿
+﻿@using HolidayTravelProject.Models.Sınıflar
+@model List<Blog>
 @{
     ViewBag.Title = "BlogDetay";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -35,10 +36,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="col-md-8 single-main">
                 <div class="single-grid">
-                    <img src="~/webBlog/images/post1.jpg" alt="" />
+                    @foreach(var x in Model) {
+                    <img src="@x.BlogImage" alt="" style="margin-bottom:20px;"/>
+                    <h2>@x.Baslik</h2>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                       @x.Aciklama
                     </p>
+                    }
                 </div>
                 <ul class="comment-list">
 
@@ -63,9 +67,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="content-form">
                     <h3>Leave a comment</h3>
                     <form>
-                        <input type="text" placeholder="Name" required />
-                        <input type="text" placeholder="Email" required />
-                        <input type="text" placeholder="Phone" required />
+                        <input type="text" placeholder="Username" required />
+                        <input type="text" placeholder="Email" required />                       
                         <textarea placeholder="Message"></textarea>
                         <input type="submit" value="SEND" />
                     </form>
