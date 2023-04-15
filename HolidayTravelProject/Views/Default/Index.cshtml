@@ -1,4 +1,5 @@
-﻿
+﻿@using HolidayTravelProject.Models.Sınıflar 
+@model List<Blog>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -62,12 +63,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="header_bottom_right_images">
 
-                        <div class="slider">
+                        <div class="slider" style="width:650px; height:390px;">
                             <ul class="rslides" id="slider1">
-                                <li><img src="~/webTema/images/img1.jpg" alt=""></li>
-                                <li><img src="~/webTema/images/img2.jpg" alt=""></li>
+                                @foreach(var x in Model) {
+                                <li><img src="@x.BlogImage" alt=""></li>
+                                @*<li><img src="~/webTema/images/img2.jpg" alt=""></li>
                                 <li><img src="~/webTema/images/img3.jpg" alt=""></li>
-                                <li><img src="~/webTema/images/img4.jpg" alt=""></li>
+                                <li><img src="~/webTema/images/img4.jpg" alt=""></li>*@
+                                }
                             </ul>
                         </div>
                     </div>
