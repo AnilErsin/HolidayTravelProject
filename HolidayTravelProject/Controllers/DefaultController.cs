@@ -21,5 +21,9 @@ namespace HolidayTravelProject.Controllers
         {
             return View();
         }
+        public PartialViewResult Partial1()
+        {
+            return PartialView();
+        }
     }
 }
