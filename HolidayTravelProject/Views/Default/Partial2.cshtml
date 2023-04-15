@@ -1,0 +1,17 @@
+﻿@using HolidayTravelProject.Models.Sınıflar
+@model List<Blog>
+
+@foreach(var x in Model) {
+<div class="right">
+        <div class="bot-left">
+            <img src="~/webTema/images/pic2.jpg" alt="" />
+        </div>
+        <div class="left-text">
+
+            <h4>@x.Baslik</h4>
+            <span class="doller">@x.Tarih</span>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo</p>
+            <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Read More >></span></a></p>
+        </div>
+    </div>
+}
