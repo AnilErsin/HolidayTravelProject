@@ -16,7 +16,7 @@ namespace HolidayTravelProject.Controllers
         {
             //var blogs = c.Blogs.ToList();
 
-            by.Deger1 = c.Blogs.ToList();
+            by.Deger1 = c.Blogs.Take(8).ToList();
             by.Deger3 = c.Blogs.Take(3).ToList();
 
             return View(by);
