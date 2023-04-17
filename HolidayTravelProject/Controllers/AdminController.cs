@@ -17,5 +17,14 @@ namespace HolidayTravelProject.Controllers
 
             return View(degerler);
         }
+        public ActionResult YeniBlog()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniBlog(Blog b)
+        {
+            return View();
+        }
     }
 }
