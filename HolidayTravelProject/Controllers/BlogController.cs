@@ -34,5 +34,18 @@ namespace HolidayTravelProject.Controllers
 
             return View(by);
         }
+      [HttpGet]
+      public PartialViewResult YorumYap()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+      public PartialViewResult YorumYap(Yorumlar b)
+        {
+            c.Yorumlars.Add(b);
+            c.SaveChanges();
+            return PartialView();
+        }
     }
 }
