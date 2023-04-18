@@ -1,9 +1,13 @@
-﻿@*<div class="content-form">
-        <h3>Leave a comment</h3>
-        <form>
-            <input type="text" placeholder="Username" required />
-            <input type="text" placeholder="Email" required />
-            <textarea placeholder="Message"></textarea>
-            <input type="submit" value="SEND" />
-        </form>
-    </div>*@
+﻿@model HolidayTravelProject.Models.Sınıflar.Yorumlar
+
+<div class="content-form">
+        <h3>leave a comment</h3>
+  
+<form method="post">
+    <input type="text" placeholder="username" name="Blogid" value="@ViewBag.deger" required />
+    <input type="text" placeholder="username" name="KullaniciAdi" required />
+    <input type="text" placeholder="email" name="Mail" required />
+    <textarea placeholder="message" name="Yorum"></textarea>
+    <input type="submit" value="send" />
+</form>
+   </div>
