@@ -131,6 +131,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -176,6 +177,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="webloginTema\css\style.css" />
+    <Content Include="webloginTema\images\b4.jpg" />
+    <Content Include="webloginTema\index.html" />
+    <Content Include="webloginTema\w3layouts-License.txt" />
     <Content Include="webTema\about.html" />
     <Content Include="webTema\contact.html" />
     <Content Include="webTema\css\slider.css" />
@@ -254,6 +259,9 @@
     <Content Include="Views\Blog\YorumYap.cshtml" />
     <Content Include="Views\Admin\YorumListesi.cshtml" />
     <Content Include="Views\Admin\YorumGetir.cshtml" />
+    <Content Include="webloginTema\fonts\Asap-Regular.ttf" />
+    <Content Include="webloginTema\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\GirisYap\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
