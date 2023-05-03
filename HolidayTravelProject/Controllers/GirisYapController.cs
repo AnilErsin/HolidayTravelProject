@@ -36,5 +36,11 @@ namespace HolidayTravelProject.Controllers
                 return View();
             }
         }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "GirisYap");
+        }
     }
 }
